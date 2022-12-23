@@ -29,8 +29,8 @@ def move_crates(regex: Pattern[str], text: str, input_stacks: list[list[str]],
     return stacks
 
 
-def move_crates_1(number_of_crates_to_move, from_stack, to_stack,
-                  stacks: list[list[str]]):
+def move_crates_1(number_of_crates_to_move: int, from_stack: int,
+                  to_stack: int, stacks: list[list[str]]):
     for i in range(0, number_of_crates_to_move):
         if len(stacks[from_stack]) != 0:
             temp = stacks[from_stack].pop(0)
@@ -38,8 +38,8 @@ def move_crates_1(number_of_crates_to_move, from_stack, to_stack,
     return stacks
 
 
-def move_crates_2(number_of_crates_to_move, from_stack, to_stack,
-                  stacks: list[list[str]]):
+def move_crates_2(number_of_crates_to_move: int, from_stack: int,
+                  to_stack: int, stacks: list[list[str]]):
     if len(stacks[from_stack]) != 0:
         temp = stacks[from_stack][0:number_of_crates_to_move]
         stacks[from_stack] = stacks[from_stack][number_of_crates_to_move:]
